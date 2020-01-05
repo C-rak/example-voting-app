@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: crakexamplevotingapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: crakexamplevotingapp 
+    spec:
+      containers:
+        - name: crakexamplevotingapp 
+          image: rkdevntms.azurecr.io/crakexamplevotingapp
+          ports:
+          - containerPort: 80
